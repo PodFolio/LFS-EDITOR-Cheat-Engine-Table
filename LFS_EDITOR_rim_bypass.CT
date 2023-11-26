@@ -4,11 +4,11 @@
     <CheatEntry>
       <ID>12</ID>
       <Description>"Rims: OBJ/SRE Restriction Bypass"</Description>
-      <LastState Activated="1"/>
+      <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
-      <AssemblerScript>{ Game   : LFS_EDITOR 0.7D40
+      <AssemblerScript>{ Game   : LFS_EDITOR 0.7D50
   Version: 
-  Date   : 2023-07-27
+  Date   : 2023-11-27
   Author : DemonRed and Draggo
   Site   : https://www.facebook.com/demonred8/
   Site   : https://podfolio.eu
@@ -20,7 +20,7 @@
 
 [ENABLE]
 //code from here to '[DISABLE]' will be used to enable the cheat
-aobscanmodule(max2,LFS_EDITOR.exe,0f 84 8b 00 00 00 83 fe 01 74 05) // should be unique
+aobscanmodule(max2,LFS_EDITOR.exe,74 71 83 fe 01 74 05 83 fe 02) // should be unique
 aobscanmodule(max,LFS_EDITOR.exe,8B 5D 08 0F B6 D1 42) // should be unique
 aobscanmodule(max3,LFS_EDITOR.exe,0F B7 47 1C 3B 86 ?? ?? ?? ??) // should be unique
 registersymbol(max)
@@ -34,16 +34,12 @@ max+3c:
   db EB 1B
 
 max2:
- db e9 8c 00 00 00 90
+ db eb 71
 
-max2+6:
- db 90 90 90 90 90 90
 
 max2+15:
- db EB 16
+ db EB 2b
 
-max2+31:
- db EB 1A
 
 max3+A:
  db EB 1A
@@ -56,16 +52,11 @@ max+3c:
   db 7e 1e
 
 max2:
- db 0f 84 8b 00 00 00
+ db 74 71
 
-max2+6:
- db 0F 85 c7 01 00 00
 
 max2+15:
- db 76 16
-
-max2+31:
- db 76 1A
+ db 76 2b
 
 max3+A:
  db 7C 1A
@@ -78,11 +69,11 @@ unregistersymbol(max3)
     <CheatEntry>
       <ID>10</ID>
       <Description>"Wheels can use ALPHA textures"</Description>
-      <LastState Activated="1"/>
+      <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
-      <AssemblerScript>{ Game   : LFS_EDITOR 0.7D40
+      <AssemblerScript>{ Game   : LFS_EDITOR 0.7D50
   Version: 
-  Date   : 2023-07-27
+  Date   : 2023-11-27
   Author : Draggo
   Site   : https://podfolio.eu
 
@@ -109,11 +100,11 @@ unregistersymbol(alpha)
     <CheatEntry>
       <ID>177</ID>
       <Description>"Add new page"</Description>
-      <LastState Activated="1"/>
+      <LastState/>
       <VariableType>Auto Assembler Script</VariableType>
-      <AssemblerScript>{ Game   : LFS_EDITOR 7D40
+      <AssemblerScript>{ Game   : LFS_EDITOR 7D50
   Version:
-  Date   : 2023-07-27
+  Date   : 2023-11-27
   Author : Draggo
   Site   : https://podfolio.eu
 
